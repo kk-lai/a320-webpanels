@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title>A320 FCU Panel</title>
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar" content="#333333" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/font-awesome-all.min.css">
+    <link rel="stylesheet" href="css/fcu.css">
+</head>
+<body>
+<div class="container">
+    <div class="panel">
+        <div class="display-unit">
+            <div class="display-lbl dlbl-speed" data-bind="visible: ktsmach()==false">SPD</div>
+            <div class="display-lbl dlbl-mach" data-bind="visible: ktsmach">MACH</div>
+            <div class="display-val speed-val" data-bind="text: spdmgd() ? '---' : (ktsmach() ? mach : spd)">100</div>         
+            <div class="display-val speed-ind fa-solid fa-circle" data-bind="visible: spdmgd()"></div>
+            
+            <div class="display-lbl dlbl-hdg" data-bind="visible: trk()==false">HDG</div>
+            <div class="display-lbl dlbl-trk" data-bind="visible: trk">TRK</div>          
+            <div class="display-val hdg-val" data-bind="text: (!showHdg() && lat()!=0) ? '---' : hdg">360</div>
+            <div class="display-lbl dlbl-lat" data-bind="visible: (lat()==1 || lnavArmed())">LAT</div>
+            <div class="display-val lat-ind fa-solid fa-circle" data-bind="visible: (lat()==1 || lnavArmed())"></div>
+            
+            <div class="display-lbl dlbl-alt">ALT</div>
+            <div class="display-val alt-val" data-bind="text: alt">10000</div>
+            
+            <div class="display-val vs-val" data-bind="text: vsText()">----</div>
+            <div class="display-lbl dlbl-vs" data-bind="visible: trk()==false">V/S</div>
+            <div class="display-lbl dlbl-fpa" data-bind="visible: trk">FPA</div>
+
+            <div class="display-lbl dlbl-hdgvs" data-bind="visible: trk()==false"><span>HDG</span><span style="padding-left:33%;">V/S</span></div>
+            <div class="display-lbl dlbl-trkfpa" data-bind="visible: trk"><span>TRK</span><span style="padding-left:33%;">FPA</span></div>
+
+        </div>
+        <div class="lbl lbl-speedmach">SPD<br/>MACH</div>
+        <div class="lbl lbl-hdgtrk">HDG<br/>TRK</div>
+        <div class="lbl lbl-vsfpa">V/S<br/>FPA</div>
+        <div class="lbl lbl-metricalt">METRIC<br/>ALT</div>
+        <!--
+        <div class="lbl lbl-vspush">PUSH<br/>TO<br/>LEVEL<br/>OFF</div>
+        <div class="lbl lbl-100">100</div>
+        <div class="lbl lbl-1000">1000</div>
+        <div class="lbl lbl-up">UP</div>
+        <div class="lbl lbl-dn">DN</div>
+        -->
+        <div class="rbtn btn-spdmach"><i class="btn-outercircle fa-solid fa-circle"></i>
+            <div class="btn-innercircle fa-solid fa-circle"></div>
+        </div>
+        
+        <div class="rbtn btn-vsfpa"><i class="btn-outercircle fa-solid fa-circle"></i>
+            <div class="btn-innercircle fa-solid fa-circle"></div>
+        </div>
+        <div class="rbtn btn-metricalt"><i class="btn-outercircle fa-solid fa-circle"></i>
+            <div class="btn-innercircle fa-solid fa-circle"></div>
+        </div>
+        <div class="adjbuttons btns-speedsel">
+            <div class="abtn" mag="1" target="spd"><div class="abtn-lbl">+1</div></div><div class="abtn" mag="-1" target="spd"><div class="abtn-lbl">-1</div></div>
+            <div class="abtn" mag="10" target="spd"><div class="abtn-lbl">+10</div></div><div class="abtn" mag="-10" target="spd"><div class="abtn-lbl">-10</div></div>
+            <div class="ppbtn btn-spd-push"><div class="abtn-lbl">PUSH</div></div><div class="ppbtn btn-spd-pull"><div class="abtn-lbl">PULL</div></div>
+        </div>
+        <div class="adjbuttons btns-hdgsel">
+            <div class="abtn" mag="1" target="hdg"><div class="abtn-lbl">+1</div></div><div class="abtn" mag="-1" target="hdg"><div class="abtn-lbl">-1</div></div>
+            <div class="abtn" mag="10" target="hdg"><div class="abtn-lbl">+10</div></div><div class="abtn" mag="-10" target="hdg"><div class="abtn-lbl">-10</div></div>
+            <div class="ppbtn btn-hdg-push"><div class="abtn-lbl">PUSH</div></div><div class="ppbtn btn-hdg-pull"><div class="abtn-lbl">PULL</div></div>
+        </div>
+        <div class="adjbuttons btns-altsel">
+            <div class="abtn" mag="2" target="alt"><div class="abtn-lbl">+100</div></div><div class="abtn" mag="-2" target="alt"><div class="abtn-lbl">-100</div></div>
+            <div class="abtn" mag="10" target="alt"><div class="abtn-lbl">+1000</div></div><div class="abtn" mag="-10" target="alt"><div class="abtn-lbl">-1000</div></div>
+            <div class="ppbtn btn-alt-push"><div class="abtn-lbl">PUSH</div></div><div class="ppbtn btn-alt-pull"><div class="abtn-lbl">PULL</div></div>
+        </div>    
+        <div class="adjbuttons btns-vssel">
+            <div class="abtn" mag="1" target="vs"><div class="abtn-lbl">+100</div></div><div class="abtn" mag="-1" target="vs"><div class="abtn-lbl">-100</div></div>
+            <div class="abtn" mag="10" target="vs"><div class="abtn-lbl">+1000</div></div><div class="abtn" mag="-10" target="vs"><div class="abtn-lbl">-1000</div></div>
+            <div class="ppbtn btn-vs-push"><div class="abtn-lbl">PUSH</div></div><div class="ppbtn btn-vs-pull"><div class="abtn-lbl">PULL</div></div>
+        </div>          
+        <div class="btn btn-loc"><div class="btn-label">LOC</div><div class="ind-loc ind-on" data-bind="visible: locInd"></div></div>
+        <div class="btn btn-ap1"><div class="btn-label">AP1</div><div class="ind-ap1 ind-on" data-bind="visible: ap1"></div></div>
+        <div class="btn btn-ap2"><div class="btn-label">AP2</div><div class="ind-ap2 ind-on"  data-bind="visible: ap2"></div></div>
+        <div class="btn btn-athr"><div class="btn-label">A/THR</div><div class="ind-athr ind-on" data-bind="visible: athr"></div></div>
+        <div class="btn btn-exped"><div class="btn-label">EXPED</div><div class="ind-exped"></div></div>
+        <div class="btn btn-appr"><div class="btn-label">APPR</div><div class="ind-appr ind-on" data-bind="visible: apprInd"></div></div>
+        <div class="wseperator seperator1"></div>
+        <div class="wseperator seperator2"></div>
+    </div>
+</div>
+<!-- <div data-bind="text: msg"></div> -->
+</body>
+<script type="text/javascript" src="js/font-awesome-all.min.js"></script>
+<script type="text/javascript" async="async" data-main="js/fcu" src="../../3rdparty/require/require.js"></script>
+</html>

@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>A320 Brakes Panel</title>
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar" content="#333333" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/font-awesome-all.min.css">
+    <link rel="stylesheet" href="css/brakes.css">
+</head>
+<body>
+<div class="container">
+    <div class="panel">
+        
+        <div class="lbl lbl-parkbrk">PARKING BRAKE</div>
+        <div class="lbl blk-parkbrk">
+        <div class="btn btn-parkbrkon">ON</div>
+        <div class="btn btn-parkbrkoff">OFF</div>
+        <div class="btn btn-parkbrk" data-bind="css: { parkbrkoff: prkbrk()==0 }"><i class="fa-solid fa-play" style="height:100%;transform: scale(1,0.7);"></i></div>
+        </div>
+        
+        <div class="lbl vbar vbar-speedbrake">
+            <div class="btn btn-speedbrk btn-speedbrakefull" mag="100"><i data-bind="visible: !speedbrkarm() && speedbrk()==1.0" class="fa-solid fa-circle" style="height:100%;"></i><i data-bind="visible: speedbrkarm() || speedbrk()!=1.0" class="fa-regular fa-circle" style="height:100%;"></i></div>
+            <div class="btn btn-speedbrk btn-speedbrakehalf" mag="50"><i data-bind="visible: !speedbrkarm() && speedbrk()==0.5" class="fa-solid fa-circle" style="height:100%;"></i><i data-bind="visible: speedbrkarm() || speedbrk()!=0.5" class="fa-regular fa-circle" style="height:100%;"></i></div>
+            <div class="btn btn-speedbrk btn-speedbrakeret" mag="0"><i data-bind="visible: !speedbrkarm() && speedbrk()==0.0" class="fa-solid fa-circle" style="height:100%;"></i><i data-bind="visible: speedbrkarm() || speedbrk()!=0.0" class="fa-regular fa-circle" style="height:100%;"></i></div>
+            <div class="btn btn-speedbrk btn-speedbrakegnd" mag="-1"><i data-bind="visible: speedbrkarm()" class="fa-solid fa-circle" style="height:100%;"></i><i data-bind="visible: !speedbrkarm()" class="fa-regular fa-circle" style="height:100%;"></i></div>
+        </div>
+        <div class="lbl blk-speedbrk-panel">
+            <div class="lbl lbl-ret">RET</div>
+            <div class="lbl lbl-half">1/2</div>
+            <div class="lbl lbl-full">FULL</div>            
+            <div class="lbl lbl-gnd">GND<br/>SPOILER<br/>ARMED</div>
+        </div>
+        <div class="lbl lbl-speedbrk">SPEED<br/>BRAKE</div>
+
+        <div class="lbl vbar vbar-flaps">
+            <div class="btn btn-flaps btn-flaps0" mag="0"><i data-bind="visible: flapsPos()==0" class="fa-solid fa-circle" style="height:100%;"></i><i data-bind="visible: flapsPos()!=0" class="fa-regular fa-circle" style="height:100%;"></i></div>
+            <div class="btn btn-flaps btn-flaps1" mag="2"><i data-bind="visible: (flapsPos()==1 || flapsPos()==2)" class="fa-solid fa-circle" style="height:100%;"></i><i data-bind="visible: (flapsPos()!=1 && flapsPos()!=2)" class="fa-regular fa-circle" style="height:100%;"></i></div>
+            <div class="btn btn-flaps btn-flaps2" mag="3"><i data-bind="visible: flapsPos()==3" class="fa-solid fa-circle" style="height:100%;"></i><i data-bind="visible: flapsPos()!=3" class="fa-regular fa-circle" style="height:100%;"></i></div>
+            <div class="btn btn-flaps btn-flaps3" mag="4"><i data-bind="visible: flapsPos()==4" class="fa-solid fa-circle" style="height:100%;"></i><i data-bind="visible: flapsPos()!=4" class="fa-regular fa-circle" style="height:100%;"></i></div>
+            <div class="btn btn-flaps btn-flaps4" mag="5"><i data-bind="visible: flapsPos()==5" class="fa-solid fa-circle" style="height:100%;"></i><i data-bind="visible: flapsPos()!=5" class="fa-regular fa-circle" style="height:100%;"></i></div>        
+        </div>
+        <div class="lbl blk-flaps-panel">
+            <div class="lbl lbl-flaps0">0</div>
+            <div class="lbl lbl-flaps1">1</div>
+            <div class="lbl lbl-flaps2">2</div>
+            <div class="lbl lbl-flaps3">3</div>
+            <div class="lbl lbl-flaps4">FULL</div>
+        </div>
+        <div class="lbl lbl-flaps">FLAPS</div>
+
+        <div class="lbl lbl-transponder">TRANSPONDER</div>
+        <div class="lbl blk-tlist">
+            <div class="opt-trans"><i data-bind="visible: tmode()!=0" class="fa-regular fa-circle"></i><i data-bind="visible: tmode()==0" class="fa-solid fa-circle"></i>&nbsp;STBY</div>
+            <div class="opt-trans"><i data-bind="visible: tmode()!=1" class="fa-regular fa-circle"></i><i data-bind="visible: tmode()==1" class="fa-solid fa-circle"></i>&nbsp;ALT RPTG OFF</div>
+            <div class="opt-trans"><i data-bind="visible: tmode()!=2" class="fa-regular fa-circle"></i><i data-bind="visible: tmode()==2" class="fa-solid fa-circle"></i>&nbsp;XPNDR</div>
+            <div class="opt-trans"><i data-bind="visible: tmode()!=3" class="fa-regular fa-circle"></i><i data-bind="visible: tmode()==3" class="fa-solid fa-circle"></i>&nbsp;TA ONLY</div>
+            <div class="opt-trans"><i data-bind="visible: tmode()!=4" class="fa-regular fa-circle"></i><i data-bind="visible: tmode()==4" class="fa-solid fa-circle"></i>&nbsp;TA/RA</div>            
+        </div>
+        
+        <div class="btn pbtn tbtn btn-tup" mag="-1"><i class="fa-solid fa-arrow-up" style="width:100%;height:100%;"></i></div>
+        <div class="btn pbtn tbtn btn-tdown" mag="1"><i class="fa-solid fa-arrow-down" style="width:100%;height:100%;"></i></div>
+        
+        <div class="lbl lbl-abrk">AUTO BRK</div>
+        <div class="lbl blk-abrk">
+            <div class="btn btn-abrk btn-abrklo" mag="1"><div class="lbl lbl-abrkbtn">LO</div><div class="lbl ind-on" data-bind="visible: abrkmode()==1"></div></div>
+            <div class="btn btn-abrk btn-abrkmed" mag="2"><div class="lbl lbl-abrkbtn">MED</div><div class="lbl ind-on" data-bind="visible: abrkmode()==2"></div></div>
+            <div class="btn btn-abrk btn-abrkmax" mag="3"><div class="lbl lbl-abrkbtn">MAX</div><div class="lbl ind-on" data-bind="visible: abrkmode()==3"></div></div>
+        </div>
+        <div class="lbl lbl-brkfan">BRK FAN</div>
+        <div class="btn pbtn btn-brkfan">
+            <div class="lbl lbl-abrkbtn" data-bind="style: { color: brkfanHotInd() ? 'red' : 'gray' }">HOT</div>
+            <div class="lbl ind-on" data-bind="visible: brkfan()"></div>
+        </div>
+        <div class="lbl lbl-gear">GEAR</div>
+        <div class="lbl vbar-gear">
+            <div class="btn btn-gear btn-gearup" mag="-1"><i data-bind="visible: gearDown()==false" class="fa-solid fa-circle" style="height:100%;"></i><i data-bind="visible: gearDown()==true" class="fa-regular fa-circle" style="height:100%;"></i></div>  
+            <div class="btn btn-gear btn-geardown" mag="1"><i data-bind="visible: gearDown()==true" class="fa-solid fa-circle" style="height:100%;"></i><i data-bind="visible: gearDown()==false" class="fa-regular fa-circle" style="height:100%;"></i></div>  
+        </div>
+        <div class="lbl blk-gear">
+            <div class="lbl lbl-gearup">UP</div>
+            <div class="lbl lbl-geardown">DOWN</div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/font-awesome-all.min.js"></script>
+<script type="text/javascript" async="async" data-main="js/brakes" src="../../3rdparty/require/require.js"></script>
+</html>

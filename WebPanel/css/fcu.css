@@ -1,0 +1,435 @@
+body {
+    margin: 0px;
+    font-family: Arial;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    z-index:1;
+}
+.container {    
+    width:300px;
+    height:200px;
+    color:white;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    visibility: hidden;
+    overflow-y: hidden;
+    z-index: 2;
+}
+
+.panel {
+    width: 100%;
+    height: 100%;
+    background: rgb(49,61,77);
+    position: relative;
+}
+
+.btn {
+    position:absolute;
+    background: black;
+}
+
+.btn-loc {
+    top:81.0%;
+    left:28.0%;
+    width:5.5%;
+    height:11.4%;
+}
+
+.btn-ap1 {
+    top:52.4%;
+    left:43.1%;
+    width:5.5%;
+    height:14.8%;
+}
+
+.btn-ap2 {
+    top:52.4%;
+    left:51.1%;
+    width:5.5%;
+    height:14.8%;
+}
+
+.btn-athr {
+    top:76.2%;
+    left:47.1%;
+    width:5.5%;
+    height:14.8%;
+}
+
+.btn-exped {
+    top:81.0%;
+    left:64.4%;
+    width:5.7%;
+    height:11.4%;
+}
+
+.btn-appr {
+    top:81.0%;
+    left:84.6%;
+    width:5.5%;
+    height:11.4%;
+}
+
+.btn-label {
+    position:absolute;
+    bottom:15%;
+    width:100%;
+    height:30%;
+    text-align:center;
+    
+}
+
+.display-unit {
+    position:absolute;
+    width:83.6%;
+    height:16.7%;
+    top:10.0%;
+    left:7.8%;
+    background:black;
+    // opacity: 0.3;
+}
+
+.display-val {
+    color:rgb(255,204,86);
+    font-size:250%;
+    text-align: center;
+}
+
+.speed-val {
+    position:absolute;
+    width:6.8%;
+    height:55.0%;
+    top:24.0%;
+    left:4.5%;
+}
+
+.speed-ind {
+    position:absolute;
+    width:2.0%;
+    height:54.3%;
+    top:22%;
+    left:12%;
+}
+
+.hdg-val {
+    position:absolute;
+    width:6.8%;
+    height:54.3%;
+    top:24.0%;
+    left:24.2%;
+}
+
+.lat-ind {
+    position:absolute;
+    width:2.0%;
+    height:54.3%;
+    top:22%;
+    left:33%;
+}
+
+.alt-val {
+    position:absolute;
+    width:10.0%;
+    height:54.3%;
+    top:24.0%;
+    left:65.1%;
+}
+
+.vs-val {
+    position:absolute;
+    width:11.0%;
+    height:54.3%;
+    top:24.0%;
+    left:86.4%;
+}
+
+.rbtn
+{
+    position:absolute;
+    color:white;
+}
+
+.btn-innercircle
+{
+    position:absolute;
+    left:0;
+    top:0;
+    width:84.6%;
+    height:84.6%;
+    padding:7.7%;
+    color: rgb(52,58,56);
+}
+
+.btn-spdmach {
+    left:1.5%;
+    top:32.9%;
+    width:6.5%;
+    height:14.3%;
+}
+
+.btn-vsfpa {
+    left:46.6%;
+    top:32.9%;
+    width:6.5%;
+    height:14.3%;
+}
+
+.btn-metricalt
+{
+    left:74.0%;
+    top:32.9%;
+    width:6.5%;
+    height:14.3%;
+}
+
+.pbtn
+{
+    position:absolute;
+    color:white;
+}
+
+.btn-outercircle
+{
+    width:100%;
+    height:100%;
+    color:white;
+}
+
+.lbl
+{
+    text-align:center;
+    position:absolute;
+}
+
+.lbl-speedmach
+{
+    width:4.8%;
+    height:8.1%;
+    left:2.2%;
+    top:51.9%;
+}
+
+.lbl-hdgtrk
+{
+    left:42.7%;
+    top:37.6%;
+    width:3.7%;
+    height:9.0%;
+}
+
+.lbl-vsfpa
+{
+    left:53.8%;
+    top:37.6%;
+    width:3.0%;
+    height:9.0%;
+}
+
+.lbl-metricalt
+{
+    left:74.8%;
+    top:52.4%;
+    width:5.2%;
+    height:6.7%;
+}
+
+.lbl-vspush
+{
+    left:92.8%;
+    top:46.7%;
+    width:5.2%;
+    height:19.0%;
+}
+
+.lbl-100
+{
+    left:62.8%;
+    top:37.6%;
+    width:2.7%;
+    height:3.8%;
+}
+
+.lbl-1000
+{
+    left:68.9%;
+    top:37.6%;
+    width:3.5%;
+    height:3.8%;
+}
+
+.lbl-up
+{
+    left:86.1%;
+    top:37.6%;
+    width:2.2%;
+    height:3.8%;
+}
+
+.lbl-dn
+{
+    left:86.3%;
+    top:71.9%;
+    width:2.2%;
+    height:3.8%;
+}
+
+.display-lbl
+{
+    text-align:center;
+    position:absolute;
+    color:rgb(255,204,86);
+    
+}
+
+.dlbl-speed {
+    left:2.8%;
+    top:8.6%;
+    width:3.4%;
+    height:22.9%;
+}
+
+.dlbl-mach {
+    left:8.0%;
+    top:8.6%;
+    width:4.5%;
+    height:22.9%;
+}
+
+.dlbl-hdg {
+    left:21.8%;
+    top:8.6%;
+    width:3.8%;
+    height:22.9%;
+}
+
+.dlbl-trk {
+    left:27.0%;
+    top:8.6%;
+    width:3.8%;
+    height:22.9%;
+}
+
+.dlbl-lat {
+    left:32.0%;
+    top:8.6%;
+    width:3.8%;
+    height:22.9%;
+}
+
+.dlbl-hdgvs {
+    left:43.9%;
+    top:34.3%;
+    width:9.8%;
+    height:25.7%;
+}
+
+.dlbl-trkfpa {
+    left:43.9%;
+    top:61.0%;
+    width:9.8%;
+    height:25.7%;
+}
+
+.dlbl-alt {
+    left:68.9%;
+    top:8.6%;
+    width:3.4%;
+    height:22.9%;
+}
+
+.dlbl-vs {
+    left:90.0%;
+    top:8.6%;
+    width:3.0%;
+    height:22.9%;
+}
+
+.dlbl-fpa {
+    left:96.0%;
+    top:8.6%;
+    width:3.0%;
+    height:22.9%;
+}
+
+.ind-on {
+    position:absolute;
+    width:50%;
+    height:15%;
+    left:25%;
+    top:20%;
+    background: rgb(0,145,16);
+}
+
+.wseperator {
+    position:absolute;
+    width:0.7%;
+    height:52.4%;
+    background:white;
+}
+
+.seperator1 {
+    left:40.2%;
+    top:38.6%;
+}
+
+.seperator2 {
+    left:58.8%;
+    top:38.6%;
+}
+
+.adjbuttons {
+    position:absolute;
+    width:14%;
+    height:40%;
+    //background: yellow;
+}
+
+.ppbtn,.abtn {
+    display:inline-block;
+    position:relative;
+    margin-right:5%;
+    margin-top:5%;
+    width:45%;
+    height:30%;
+    background: black;
+    color:white;
+}
+
+.btns-speedsel
+{
+    position:absolute;
+    left:9.8%;
+    top:35%;    
+}
+
+.btns-hdgsel
+{
+    left:25.7%;
+    top:35%;    
+}
+
+.abtn-lbl
+{
+    position:absolute;
+    width:100%;
+    height:50%;
+    top:25%;
+    font-size: 140%;
+    text-align: center;
+}
+
+.btns-altsel
+{
+    left:60%;
+    top:35%;    
+}
+
+.btns-vssel
+{
+    left:82%;
+    top:35%;    
+}

@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>A320 Engines Panel</title>
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar" content="#333333" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/font-awesome-all.min.css">
+    <link rel="stylesheet" href="css/engines.css">
+</head>
+<body>
+<div class="container">
+    <div class="panel">
+        <div class="lbl engine-left">
+            <div class="blk-thrust-bar">
+                <div class="ctl-thrust-lever lever-0" clicked="0" val="0">
+                    <div class="lbl lvr-ctrl" data-bind="visible: (!eng0Rev())"><i class="fa-solid fa-circle full-height"></i></div>
+                </div>
+                <div class="blk-rev-thrust">
+                    <div class="lbl lvr-ctrl" style="bottom:0;" data-bind="visible: eng0Rev"><i class="fa-solid fa-circle full-height" ></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="lbl engine-right">
+            <div class="blk-thrust-bar">
+                <div class="ctl-thrust-lever lever-1" clicked="0" val="0">
+                    <div class="lbl lvr-ctrl" data-bind="visible: (!eng1Rev())"><i class="fa-solid fa-circle full-height"></i></div>
+                </div>
+                <div class="blk-rev-thrust">
+                    <div class="lbl lvr-ctrl" style="bottom:0;" data-bind="visible: eng1Rev"><i class="fa-solid fa-circle full-height" ></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="btn btn-thrust btn-toga" cmd="systems.doTOGAThrust()">
+            <div class="lbl lbl-thrust">TOGA</div>
+        </div>
+        <div class="btn btn-thrust btn-mct" cmd="systems.doMCTThrust()">
+            <div class="lbl lbl-thrust" style="top:20%;">FLX<br/>MCT</div>
+        </div>
+        <div class="btn btn-thrust btn-cl" cmd="systems.doCLThrust()">
+            <div class="lbl lbl-thrust">CL</div>
+        </div>
+        <div class="btn btn-thrust btn-idle" cmd="systems.doIdleThrust()">
+            <div class="lbl lbl-thrust">IDLE</div>
+        </div>
+        <div class="btn btn-thrust btn-rev" cmd="systems.toggleFastRevThrust()">
+            <div class="lbl lbl-thrust">REV</div>
+        </div>
+        
+        <div class="btn btn-engine btn-eng-on btn-engine1" engine="0">
+            <div class="lbl lbl-engine-btn">1</div>
+            <div class="lbl ind-on" data-bind="visible: (!eng0())"></div>
+        </div>
+        
+        <div class="btn btn-engine btn-eng-on btn-engine2" engine="1">
+            <div class="lbl lbl-engine-btn">2</div>
+            <div class="lbl ind-on" data-bind="visible: (!eng1())"></div>
+        </div>
+        
+        <div class="btn btn-engine btn-lock">   
+            <div class="lbl lbl-engine-btn">LOCK</div>
+            <div class="lbl ind-on" data-bind="visible: lock"></div>
+        </div>
+        
+        <div class="btn btn-engine btn-engine-mode btn-crank" mode="0">   
+            <div class="lbl lbl-engine-btn">CRANK</div>
+            <div class="lbl ind-on" data-bind="visible: engStartSwitch()==0"></div>
+        </div>
+        <div class="btn btn-engine btn-engine-mode btn-norm" mode="1">   
+            <div class="lbl lbl-engine-btn">NORM</div>
+            <div class="lbl ind-on" data-bind="visible: engStartSwitch()==1"></div>
+        </div>
+        <div class="btn btn-engine btn-engine-mode btn-ign" mode="2">   
+            <div class="lbl lbl-engine-btn">IGN</div>
+            <div class="lbl ind-on" data-bind="visible: engStartSwitch()==2"></div>
+        </div>
+        <div class="lbl lbl-engine">ENGINE</div>
+        <div class="lbl lbl-mode">MODE</div>
+        
+        <div class="lbl-small lbl-toga">TOGA</div>
+        <div class="lbl-small lbl-mct">MCT</div>
+        <div class="lbl-small lbl-cl">CL</div>
+        <div class="lbl-small lbl-idle">IDLE</div>
+        
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/font-awesome-all.min.js"></script>
+<script type="text/javascript" async="async" data-main="js/engines" src="../../3rdparty/require/require.js"></script>
+</html>

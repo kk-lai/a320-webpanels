@@ -1,0 +1,393 @@
+body {
+    margin: 0px;
+    font-family: Arial;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    z-index:1;
+}
+
+.container {    
+    width:300px;
+    height:200px;
+    color:white;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    visibility: hidden;
+    overflow-y: hidden;
+    z-index: 2;
+}
+
+.panel {
+    width: 100%;
+    height: 100%;
+    background: rgb(49,61,77);
+    position: relative;
+}
+
+.lbl,.btn {
+    position:absolute;
+    color:white;
+}
+
+
+.blk-parkbrk {
+    width: 17.0%;
+    height: 33.2%;
+    left: 50.0%;
+    top: 7%;
+}
+
+.btn-parkbrkon {
+    left: 75%;
+    top: 45%;
+}
+
+.btn-parkbrkoff {
+    left: 40%;
+    top: 5%;
+}
+
+.btn-parkbrk {
+    width: 70%;
+    height: 70%;
+    left: 15%;
+    top: 15%;    
+    text-align:center;
+    //transform: rotate(-90deg);
+}
+
+.parkbrkoff {
+    transform: rotate(-90deg);
+}
+
+.lbl-parkbrk {
+    width: 16.1%;
+    height: 2.9%;
+    left: 52.6%;
+    top: 3%;
+}
+
+.btn-speedbrakefull {
+    width: 100.0%;
+    height: 11.1%;
+    left: 0%;
+    top: 88.9%;
+}
+
+.btn-speedbrakehalf {
+    width: 100.0%;
+    height: 11.1%;
+    left: 0%;
+    top: 48%;
+}
+
+.btn-speedbrakegnd {
+    width: 100.0%;
+    height: 11.1%;
+    left: 0%;
+    top: 0%;
+}
+
+.btn-speedbrakeret {
+    width: 100.0%;
+    height: 11.1%;
+    left: 0%;
+    top: 20%;
+}
+
+.vbar {
+    width: 4.2%;
+    height: 81.0%;
+    background: black;
+}
+
+.vbar-speedbrake {
+    left: 14.6%;
+    top: 11.1%;
+}
+
+.blk-speedbrk-panel
+{
+    width: 5.6%;
+    height: 81.0%;
+    left: 20.4%;
+    top: 11.1%;
+}
+
+.lbl-full {
+    left: 0%;
+    top: 90%;
+}
+
+.lbl-half {
+    left: 0%;
+    top: 51%;
+}
+
+.lbl-ret {
+    left: 0%;
+    top: 23%;
+}
+
+.lbl-gnd {
+    left: 0%;
+    top: 0%;
+}
+
+.lbl-speedbrk
+{
+    width: 6.1%;
+    height: 8.4%;
+    left: 1.9%;
+    top: 26.3%;
+}
+
+.vbar-flaps {
+    left: 32.5%;
+    top: 11.1%;
+    width: 4.2%;
+    height: 81.0%;
+}
+
+.btn-flaps0 {
+    width: 100%;
+    height: 11.1%;
+    left: 0%;
+    top: 0%;
+}
+
+.btn-flaps1 {
+    width: 100%;
+    height: 11.1%;
+    left: 0%;
+    top: 22.2%;
+}
+
+.btn-flaps2 {
+    width: 100%;
+    height: 11.1%;
+    left: 0%;
+    top: 44.5%;
+}
+
+.btn-flaps3 {
+    width: 100%;
+    height: 11.1%;
+    left: 0%;
+    top: 66.7%;
+}
+
+.btn-flaps4 {
+    width: 100%;
+    height: 11.1%;
+    left: 0%;
+    top: 88.9%;
+}
+
+.lbl-flaps {
+    width: 5.7%;
+    height: 3.1%;
+    left: 42.7%;
+    top: 28.2%;
+}
+
+.blk-flaps-panel {
+    width: 2.3%;
+    height: 81.0%;
+    left: 37.5%;
+    top: 11.1%;
+}
+
+.lbl-flaps0 {
+    left: 0%;
+    top: 3%;
+}
+
+.lbl-flaps1 {
+    left: 0%;
+    top: 25%;
+}
+
+.lbl-flaps2 {
+    left: 0%;
+    top: 47%;
+}
+
+.lbl-flaps3 {
+    left: 0%;
+    top: 69%;
+}
+
+.lbl-flaps4 {
+    left: 0%;
+    top: 90%;
+}
+
+.lbl-transponder {
+    width: 16.1%;
+    height: 2.9%;
+    left: 52.6%;
+    top: 40%;
+}
+
+.blk-tlist {
+    width: 19.2%;
+    height: 27.1%;
+    left: 60%;
+    top: 50%;
+}
+
+.opt-trans {
+    padding-bottom: 10%;
+}
+
+.pbtn {
+    background:black;
+    width: 6.8%;
+    height: 14.6%;
+}
+
+.btn-tup {
+    left: 50%;
+    top: 50%;
+}
+
+.btn-tdown {
+    left: 50%;
+    top: 75%;
+}
+
+.blk-abrk {
+    left: 70%;
+    top: 10%;
+    width: 25%;
+    height: 14.6%;
+}
+
+.btn-abrk {
+    width:27.2%;
+    height:100%;
+    background:black;
+}
+
+.btn-abrklo {
+    top:0%;
+    left:0%;
+}
+
+.btn-abrkmed {
+    top:0%;
+    left:36.4%;
+}
+
+.btn-abrkmax {
+    top:0%;
+    right:0%;
+}
+
+.btn-brkfan {
+    left:0%;
+    top:0%;
+}
+
+.lbl-abrkbtn
+{
+    text-align:center;
+    bottom:5%;
+    width:100%;
+}
+
+.ind-on,indOn {
+    position:absolute;
+    width:50%;
+    height:15%;
+    left:25%;
+    top:20%;
+    background: rgb(0,145,16);
+}
+
+.lbl-abrk 
+{
+    width: 16.1%;
+    height: 2.9%;
+    left: 79%;
+    top: 3%;
+}
+
+.btn-brkfan
+{
+    left: 70%;
+    top: 32%;
+}
+
+.lbl-brkfan
+{
+    width:16.1%;
+    height:2.9%;
+    left: 70%;
+    top:27%;
+}
+
+.lbl-brkfanbtn
+{
+    text-align:center;
+    bottom:5%;
+    width:100%;
+}
+
+.vbar-gear
+{
+    top:40%;
+    left:85%;
+    width: 4.2%;
+    height: 50.0%;
+    background: black;
+}
+
+.lbl-gear
+{
+    width:16.1%;
+    height:2.9%;
+    left: 84%;
+    top:31%;
+}
+
+.btn-gearup
+{
+    width: 100%;
+    height: 18%;
+    left: 0%;
+    top: 0%;
+}
+
+.btn-geardown
+{
+    width: 100%;
+    height: 18%;
+    left: 0%;
+    top: 82%;
+}
+
+.blk-gear
+{
+    top:40%;
+    left:90%;
+    width: 7%;
+    height: 50.0%;
+}
+
+.lbl-gearup
+{
+    top:5%;
+    left:0%;
+}
+
+.lbl-geardown
+{
+    bottom:5%;
+    left:0;
+}

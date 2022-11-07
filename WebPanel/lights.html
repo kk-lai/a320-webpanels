@@ -1,0 +1,113 @@
+<html>
+<head>
+    <title>A320 Lights Panel</title>
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar" content="#333333" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/font-awesome-all.min.css">
+    <link rel="stylesheet" href="css/lights.css">
+</head>
+<body>
+<div class="container">
+    <div class="panel">
+        <div class="blk-heading"><div class="blk-extlt">
+            <div class="lbl-heading">EXT LT</div>
+            </div><div class="blk-apu">
+            <div class="lbl-heading">APU</div>
+            </div><div class="blk-intlt">
+            <div class="lbl-heading">INT LT</div>
+            </div>
+        </div><div class="blk-sw">
+            <div class="lbl lbl-swcaption">STROBE</div>
+            <div class="lbl lbl-swtop">ON</div>
+            <div class="blk-vbar ctl-sw" lvls="3" pos="1" clicked="0" sw="strobe"><div class="lbl ctl-switch"></div></div>
+            <div class="lbl lbl-swcenter">A<br/>U<br/>T<br/>O</div>
+            <div class="lbl lbl-swbottom">OFF</div>
+        </div><div class="blk-sw">
+            <div class="lbl lbl-swcaption">BEACON</div>
+            <div class="lbl lbl-swtop">ON</div>
+            <div class="blk-vbar ctl-sw" lvls="2" pos="1" clicked="0" sw="beacon"><div class="lbl ctl-switch"></div></div>
+            
+            <div class="lbl lbl-swbottom">OFF</div>
+        </div><div class="blk-sw">
+            <div class="lbl lbl-swcaption">WING</div>
+            <div class="lbl lbl-swtop">ON</div>
+            <div class="blk-vbar ctl-sw" lvls="2" pos="1" clicked="0" sw="wing"><div class="lbl ctl-switch"></div></div>
+            <div class="lbl lbl-swbottom">OFF</div>
+        </div><div class="blk-sw">
+            <div class="lbl lbl-swcaption">NAV&amp;LOGO</div>
+            <div class="lbl lbl-swtop">2</div>
+            <div class="blk-vbar ctl-sw" lvls="3" pos="1" clicked="0" sw="nav" maxVal="2"><div class="lbl ctl-switch"></div></div>
+            <div class="lbl lbl-swcenter">1</div>
+            <div class="lbl lbl-swbottom">OFF</div>
+        </div><div class="blk-sw">
+            <div class="lbl lbl-btn-label">MASTER SW</div>
+            <div class="btn-apu-btn btn-apu-master" ctl="apu-master">
+                <div class="btn-on-ind" data-bind="visible: apuMaster">ON</div>
+            </div>
+        </div><div class="blk-sw">
+        </div><div class="blk-sw">
+        </div><div class="blk-sw">
+            <div class="lbl lbl-swcaption">DOME</div>
+            <div class="lbl lbl-swtop">BRT</div>
+            <div class="blk-vbar ctl-sw" lvls="3" pos="1" clicked="0" sw="dome"><div class="lbl ctl-switch"></div></div>
+            <div class="lbl lbl-swcenter">DIM</div>
+            <div class="lbl lbl-swbottom">OFF</div>
+        </div><div class="blk-sw">
+            
+        </div><div class="blk-sw">
+            <div class="lbl lbl-swcaption" style="font-size:75%;">RWY TURN OFF</div>
+            <div class="lbl lbl-swtop">ON</div>
+            <div class="blk-vbar ctl-sw" lvls="2" pos="1" clicked="0" sw="rwyoff"><div class="lbl ctl-switch"></div></div>
+            <div class="lbl lbl-swbottom">OFF</div>
+        </div><div class="blk-sw">
+            <div class="lbl lbl-swtop">L</div>
+            <div class="blk-vbar ctl-sw" lvls="3" pos="1" clicked="0" sw="landl"><div class="lbl ctl-switch"></div></div>
+        </div><div class="blk-sw">
+            <div class="lbl lbl-swtop">R</div>
+            <div class="blk-vbar ctl-sw" lvls="3" pos="1" clicked="0" sw="landr"><div class="lbl ctl-switch"></div></div>
+        </div><div class="blk-sw">
+            <div class="lbl lbl-swcaption">NOSE</div>
+            <div class="lbl lbl-swtop">TO</div>
+            <div class="blk-vbar ctl-sw" lvls="3" pos="1" clicked="0" sw="nose"><div class="lbl ctl-switch"></div></div>
+            <div class="lbl lbl-swcenter">TAXI</div>
+            <div class="lbl lbl-swbottom">OFF</div>    
+        </div><div class="blk-sw">
+            <div class="lbl lbl-btn-label">START</div>
+            <div class="btn-apu-btn btn-apu-start" ctl="apu-master">
+                <div class="btn-on-ind" data-bind="visible: apuStart">ON</div>
+                <div class="btn-avail-ind" data-bind="visible: apuAvail">AVAIL</div>
+            </div>
+        </div><div class="blk-sw">
+            <div class="lbl lbl-swcaption" style="font-size:90%">SEAT BELTS</div>
+            <div class="lbl lbl-swtop">ON</div>
+            <div class="blk-vbar ctl-sw" lvls="2" pos="1" clicked="0" sw="seatblt"><div class="lbl ctl-switch"></div></div>
+            <div class="lbl lbl-swcenter">A<br/>U<br/>T<br/>O</div>
+            <div class="lbl lbl-swbottom">OFF</div>   
+        </div><div class="blk-sw">
+            <div class="lbl lbl-swcaption" style="font-size:90%">NO SMOKING</div>
+            <div class="lbl lbl-swtop">ON</div>
+            <div class="blk-vbar ctl-sw" lvls="3" pos="1" clicked="0" sw="nosmoking"><div class="lbl ctl-switch"></div></div>
+            <div class="lbl lbl-swcenter">A<br/>U<br/>T<br/>O</div>
+            <div class="lbl lbl-swbottom">OFF</div>   
+        </div><div class="blk-sw">
+            <div class="lbl lbl-swcaption" style="font-size:80%">EMER EXIT LT</div>
+            <div class="lbl lbl-swtop">ON</div>
+            <div class="blk-vbar ctl-sw" lvls="3" pos="1" clicked="0" sw="eexitlt"><div class="lbl ctl-switch"></div></div>
+            <div class="lbl lbl-swcenter">ARM</div>
+            <div class="lbl lbl-swbottom">OFF</div>   
+        </div>
+        <div><div class="lbl lbl-land">LAND</div>
+        </div><div class="blk-land-lbl">
+            <div class="lbl lbl-land-on">ON</div>
+            <div class="lbl-land-off">OFF</div>
+            <div class="lbl lbl-land-retract">RETRACT</div>
+        </div>
+        
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/font-awesome-all.min.js"></script>
+<script type="text/javascript" async="async" data-main="js/lights" src="../../3rdparty/require/require.js"></script>
+</html>

@@ -1,0 +1,219 @@
+body {
+    margin: 0px;
+    font-family: Arial;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    z-index:1;
+}
+
+.full-height {
+    height:100%;
+}
+
+.container {    
+    width:300px;
+    height:200px;
+    color:white;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    visibility: hidden;
+    overflow-y: hidden;
+    z-index: 2;
+}
+
+.panel {
+    width: 100%;
+    height: 100%;
+    background: rgb(49,61,77);
+    position: relative;
+}
+
+.lbl,.btn {
+    position:absolute;
+    color:white;
+}
+
+.engine-left {
+    left: 5%;
+    top:10%;
+    height:60%;
+    width:15%;
+}
+
+.engine-right {
+    left:50%;
+    top:10%;
+    height:60%;
+    width:15%;
+}
+
+.blk-thrust-bar {
+    height:100%;
+    width:100%;
+}
+
+.ctl-thrust-lever {
+    width:100%;
+    height:80%;
+    background:black;
+}
+
+.blk-rev-thrust {
+
+    width:100%;
+    height:20%;
+    background:rgb(204, 204, 0);
+}
+
+.lvr-ctrl {
+    width:100%;
+}
+
+.btn-thrust, .btn-engine
+{
+    width:15%;
+    height:9.96%;
+    background: black;
+}
+
+.btn-toga
+{
+    left: 75%;
+    top:10%;
+}
+
+.btn-mct
+{
+    left: 75%;
+    top:23%;
+}
+
+.btn-cl
+{
+    left: 75%;
+    top: 36%;
+}
+
+.btn-idle
+{
+    left: 75%;
+    top: 50%;   
+}
+
+.btn-rev
+{
+    left: 75%;
+    top: 63%;       
+}
+
+.lbl-thrust
+{
+    position: absolute;
+    height:100%;
+    width:100%;
+    text-align:center;
+    top:40%;
+    font-size:70%;
+}
+
+.btn-engine1
+{
+    left: 5%;
+    top: 75%;  
+}
+
+.btn-engine2
+{
+    left: 50%;
+    top: 75%;  
+}
+
+.btn-lock
+{
+    left:28%;
+    top:60%;
+}
+
+.lbl-engine-btn
+{
+    position: absolute;
+    height:30%;
+    width:100%;
+    text-align:center;
+    bottom:3%;
+    font-size:70%;
+}
+
+.ind-on {
+    position:absolute;
+    width:50%;
+    height:15%;
+    left:25%;
+    top:20%;
+    background: rgb(0,145,16);
+}
+
+.btn-crank
+{
+    left:25%;
+    top:88%;
+}
+
+.btn-norm
+{
+    left:45%;
+    top:88%;
+}
+
+.btn-ign
+{
+    left:65%;
+    top:88%;
+}
+
+.lbl-engine
+{
+    top:1%;
+    left:27%;
+}
+
+.lbl-mode
+{
+    left:5%;
+    top:90%;
+}
+
+.lbl-small
+{
+    font-size:70%;
+    position:absolute;
+    color:white;
+}
+
+.lbl-toga
+{
+    left:23%;
+    top:13.5%;
+}
+
+.lbl-mct
+{
+    left:23%;
+    top:21.5%;
+}
+
+.lbl-cl
+{
+    left:23%;
+    top:28%;
+}
+
+.lbl-idle
+{
+    left:23%;
+    top:52%;    
+}
