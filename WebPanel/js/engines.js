@@ -228,21 +228,25 @@ require([
         if (ts>nextRefreshTS) {
             for(const p in ko.utils.knockprops.aliases) {
                 //console.log(ko.utils.knockprops.aliases[p]);
+                if (ts<=nextRefreshTS) {
+                    break;
+                }
                 ko.utils.knockprops.ws.send(JSON.stringify({
                     command : 'get',
                     node : ko.utils.knockprops.aliases[p]
                 }));
             }
-            var lvr=jquery(".lever-0").first();
-            var val=viewModel.eng0Throttle();
             
-            moveLevelFraction(lvr, val);
-            lvr=jquery(".lever-1").first();
-            val=viewModel.eng1Throttle();
-            moveLevelFraction(lvr, val);
-            
+            if (ts>nextRefreshTS) {
+                var lvr=jquery(".lever-0").first();
+                var val=viewModel.eng0Throttle();
+                
+                moveLevelFraction(lvr, val);
+                lvr=jquery(".lever-1").first();
+                val=viewModel.eng1Throttle();
+                moveLevelFraction(lvr, val);
+            }      
             nextRefreshTS=ts+refreshRate;
-            
         }
         setTimeout(refreshProperties, refreshRate);
     }

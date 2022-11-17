@@ -215,9 +215,13 @@ require([
     
     var refreshProperties= function() {
         var ts = Date.now();
+        
         if (ts>nextRefreshTS) {
             for(const p in ko.utils.knockprops.aliases) {
                 //console.log(ko.utils.knockprops.aliases[p]);
+                if (ts<=nextRefreshTS) {
+                    break;
+                }
                 ko.utils.knockprops.ws.send(JSON.stringify({
                     command : 'get',
                     node : ko.utils.knockprops.aliases[p]

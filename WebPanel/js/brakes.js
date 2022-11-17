@@ -67,6 +67,25 @@ require([
         flapsTimer=setTimeout(setFlaps, flapChangeDelay);
     }
     
+    var refreshProperties= function() {
+        var ts = Date.now();
+        
+        if (ts>nextRefreshTS) {
+            for(const p in ko.utils.knockprops.aliases) {
+                //console.log(ko.utils.knockprops.aliases[p]);
+                if (ts<=nextRefreshTS) {
+                    break;
+                }
+                ko.utils.knockprops.ws.send(JSON.stringify({
+                    command : 'get',
+                    node : ko.utils.knockprops.aliases[p]
+                }));
+            }
+            nextRefreshTS=ts+refreshRate;
+        }
+        setTimeout(refreshProperties, refreshRate);
+    }
+    
     jquery(document).ready(function() {
         var touchDevice = ('ontouchstart' in document.documentElement);
         var ev;
@@ -195,20 +214,6 @@ require([
         return (this.l1brktemp() > 300 || this.l2brktemp() > 300 || this.r1brktemp() > 300 || this.r2brktemp() > 300);
     },viewModel);
     
-    var refreshProperties= function() {
-        var ts = Date.now();
-        if (ts>nextRefreshTS) {
-            for(const p in ko.utils.knockprops.aliases) {
-                //console.log(ko.utils.knockprops.aliases[p]);
-                ko.utils.knockprops.ws.send(JSON.stringify({
-                    command : 'get',
-                    node : ko.utils.knockprops.aliases[p]
-                }));
-            }
-            nextRefreshTS=ts+refreshRate;
-        }
-        setTimeout(refreshProperties, refreshRate);
-    }
     setTimeout(refreshProperties, refreshRate);
     
     ko.applyBindings( viewModel);
