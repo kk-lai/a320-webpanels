@@ -11,10 +11,10 @@ Usage
 -----
 1. Add "--httpd=8080" in the additional setting when starting up the simulation
 2. Use your browser to browse the following addresses
-http://<your ip address>:8080/aircraft-dir/WebPanel/fcu.html
-http://<your ip address>:8080/aircraft-dir/WebPanel/brakes.html
-http://<your ip address>:8080/aircraft-dir/WebPanel/engines.html
-http://<your ip address>:8080/aircraft-dir/WebPanel/lights.html
+http://your-ip-address:8080/aircraft-dir/WebPanel/fcu.html
+http://your-ip-address:8080/aircraft-dir/WebPanel/brakes.html
+http://your-ip-address:8080/aircraft-dir/WebPanel/engines.html
+http://your-ip-address:8080/aircraft-dir/WebPanel/lights.html
 
 Todo
 ----
